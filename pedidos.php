@@ -1,9 +1,3 @@
-<?php
-session_start();
-include "logica/pedido.model.php";
-
-$pedidos = get_all_pedidos();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +6,11 @@ $pedidos = get_all_pedidos();
   <?php include("include/head.php") ?>
 
 </head>
+<?php
+include "logica/pedido.model.php";
 
+$pedidos = get_all_pedidos();
+?>
 <body id="page-top">
 
   <!-- Page Wrapper -->

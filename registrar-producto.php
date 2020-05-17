@@ -1,9 +1,3 @@
-<?php
-session_start();
-include "logica/tienda.model.php";
-$tiendas = get_all_tienda();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +6,10 @@ $tiendas = get_all_tienda();
     <?php include("include/head.php") ?>
 
 </head>
-
+<?php
+include "logica/tienda.model.php";
+$tiendas = get_all_tienda();
+?>
 <body id="page-top">
 
     <!-- Page Wrapper -->

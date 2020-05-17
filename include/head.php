@@ -1,7 +1,8 @@
 <?php 
+session_start();
 if(!isset($_SESSION["id_usuario"])){
     // mensaje de cerrar sesión
-    //header("Location: index.php");
+    header("Location: login.php");
 }
 ?>
 <meta charset="utf-8">

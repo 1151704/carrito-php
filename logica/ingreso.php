@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'usuario.model.php';
 
 $username = null;

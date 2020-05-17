@@ -1,14 +1,3 @@
-<?php
-session_start();
-include "logica/producto.model.php";
-$id = null;
-
-if(isset($_GET['id'])) {$id = $_GET['id'];}
-
-$producto = get_producto_by_id($id);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +6,15 @@ $producto = get_producto_by_id($id);
     <?php include("include/head.php") ?>
 
 </head>
+<?php
+include "logica/producto.model.php";
+$id = null;
 
+if(isset($_GET['id'])) {$id = $_GET['id'];}
+
+$producto = get_producto_by_id($id);
+
+?>
 <body id="page-top">
 
     <!-- Page Wrapper -->

@@ -1,9 +1,3 @@
-<?php
-session_start();
-include "logica/producto.model.php";
-
-$productos = get_all_producto();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +6,11 @@ $productos = get_all_producto();
   <?php include("include/head.php") ?>
 
 </head>
+<?php
+include "logica/producto.model.php";
 
+$productos = get_all_producto();
+?>
 <body id="page-top">
 
   <!-- Page Wrapper -->
