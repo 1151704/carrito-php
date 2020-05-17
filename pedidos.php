@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "logica/pedido.model.php";
 
 $pedidos = get_all_pedidos();

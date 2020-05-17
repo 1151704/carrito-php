@@ -18,8 +18,12 @@ if(!empty($_GET)){
 			}else{
 				$_SESSION["carrito"] = $carrito_new;
 			}
-        }
-    	header("Location: ../carrito.php");
+		}
+		if (isset($_GET['redirect'])) {
+			header("Location: ../".$_GET['redirect']);
+		} else {
+			header("Location: ../index.php");
+		}
 	}
 }
 

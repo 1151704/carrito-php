@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "logica/tienda.model.php";
 $tiendas = get_all_tienda();
 ?>

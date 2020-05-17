@@ -26,7 +26,7 @@ if(!empty($_POST)){
 				$_SESSION["carrito"] = $carrito;
 			}
         }
-        header("Location: ../productos_tienda.php");
+        header("Location: ../index.php");
 	}
 }
 

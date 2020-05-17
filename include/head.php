@@ -1,7 +1,7 @@
 <?php 
 if(!isset($_SESSION["id_usuario"])){
     // mensaje de cerrar sesión
-    header("Location: index.php");
+    //header("Location: index.php");
 }
 ?>
 <meta charset="utf-8">

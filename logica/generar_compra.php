@@ -35,7 +35,9 @@ if (isset($id_cliente)) {
         }
 
     }
-
+    $_SESSION["carrito"] = array();
+    
+    header("Location: ../pedido_procesado.php?id_pedido=".$id_pedido);
 }
 
 

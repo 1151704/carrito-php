@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "logica/producto.model.php";
 
 $productos = get_all_producto();

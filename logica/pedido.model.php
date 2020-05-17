@@ -45,3 +45,30 @@ function get_all_pedidos() {
     return $stmt->fetchAll();
 
 } 
+
+function get_pedido_by_id($id) {
+    
+    $sql = "select p.*, c.nombre as nombre_cliente, c.correo_electronico as correo_electronico_cliente, c.telefono as telefono_cliente from pedido p join cliente c on c.id_cliente = p.id_cliente where p.id_pedido = ?";
+
+    $db_conn = Database::StartUp();
+
+    $stmt = $db_conn->prepare($sql);
+    $stmt->bindParam(1, $id);
+    $stmt->execute();
+    return $stmt->fetch();
+
+}
+
+
+function get_detalles_pedido_by_pedido($id_pedido) {
+    
+    $sql = "select p.*, pp.nombre as nombre_producto from pedido_detalle p join producto pp on pp.id_producto = p.id_producto where p.id_pedido = ?";
+
+    $db_conn = Database::StartUp();
+
+    $stmt = $db_conn->prepare($sql);
+    $stmt->bindParam(1, $id_pedido);
+    $stmt->execute();
+    return $stmt->fetchAll();
+
+}
