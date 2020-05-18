@@ -64,7 +64,9 @@ $pedidos = get_all_pedidos();
                         <td><?php echo $pedido['direccion']; ?></td>
                         <td><?php echo $pedido['valor_total']; ?></td>
                         <td><?php echo $pedido['fecha_creacion']; ?></td>
-                        <td></td>
+                        <td>
+                          <a href="pedido.php?id_pedido=<?php echo $pedido['id_pedido']; ?>" >Ver detalle</a>
+                        </td>
                       </tr>
                     <?php } ?>
                   </tbody>
